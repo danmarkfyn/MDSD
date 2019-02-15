@@ -9,13 +9,22 @@ package vendingmachine;
  *
  * @author Jakob
  */
-public class VendingMachine extends Builder{
+public class Transition {
+    
+    
+    String event;
+    String target;
+    
+    
+    public Transition(String event, String target){
 
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-    }
-
+        
+        this.event = event;
+        this.target = target;
 }
+    
+    
+}
+
+
+

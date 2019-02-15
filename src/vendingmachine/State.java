@@ -5,27 +5,24 @@
  */
 package vendingmachine;
 
-import java.util.ArrayList;
 import java.util.List;
 
 /**
  *
  * @author Jakob
  */
-public class Machine {
-    
-    private List<State> states;
-    
-    
-    public Machine(){
-        this.states = new ArrayList<State>();
+
+public class State {
+
+    private String name;
+
+    List<Transition> transitioList;
+
+    public State(String name) {
+        this.name = name;
     }
-    
-    
-    public List<State> getStates(){
-        
-        return this.states;
+
+    public void addTransition(Transition t){
+        transitioList.add(t);
     }
-    
-    
 }
