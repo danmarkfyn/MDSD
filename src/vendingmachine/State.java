@@ -12,17 +12,19 @@ import java.util.List;
  * @author Jakob
  */
 
+
+// Represents a state
 public class State {
 
     private String name;
 
-    List<Transition> transitioList;
+    List<Transition> transitionList;
 
     public State(String name) {
         this.name = name;
     }
 
     public void addTransition(Transition t){
-        transitioList.add(t);
+        transitionList.add(t);
     }
 }

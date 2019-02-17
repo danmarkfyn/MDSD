@@ -12,6 +12,8 @@ import java.util.List;
  *
  * @author Jakob
  */
+
+// State machine builder
 public abstract class Builder {
 
     // machine return this
@@ -21,7 +23,8 @@ public abstract class Builder {
     private State currentState;
     private List<State> all = new ArrayList<State>();
     private String event;
-
+    
+    
     public Builder machine() {
         return this;
     }
@@ -32,16 +35,15 @@ public abstract class Builder {
         return this;
     }
 
-    public Builder when(String e) {
+    public Builder transition(String e) {
         event = e;
         
         return this;
     }
     
-    public Builder to(String s){
-       currentState.addTransition(new Transition("e",s));
+    public Builder to(String s, String t){
+       currentState.addTransition(new Transition(s,t));
     
     return this;
     }
-
 }

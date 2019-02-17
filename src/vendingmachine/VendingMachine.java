@@ -9,13 +9,13 @@ package vendingmachine;
  *
  * @author Jakob
  */
-public class VendingMachine extends Builder{
+public class VendingMachine extends Builder {
 
     /**
      * @param args the command line arguments
      */
+    // Run the Vending State Machine here
     public static void main(String[] args) {
         // TODO code application logic here
     }
-
 }

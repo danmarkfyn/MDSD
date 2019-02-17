@@ -9,22 +9,15 @@ package vendingmachine;
  *
  * @author Jakob
  */
+// Represents a transition
 public class Transition {
-    
-    
+
     String event;
     String target;
-    
-    
-    public Transition(String event, String target){
 
-        
+    public Transition(String event, String target) {
+
         this.event = event;
         this.target = target;
+    }
 }
-    
-    
-}
-
-
-
