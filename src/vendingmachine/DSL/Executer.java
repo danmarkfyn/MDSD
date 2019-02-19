@@ -1,33 +1,43 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package vendingmachine.DSL;
 
-
+import java.util.ArrayList;
 import java.util.List;
+
+
 
 /**
  *
- * @author Jakob
+ * @author Jakob 
+ * Made with use of code provided by Ulrik Pagh Schultz, University of Southern Denmark
  */
+
 public class Executer {
 
-    private State currentState;
-    //private List<State> states;
+    // Executer of Statemachine on meta model
 
+    private List<State> all = new ArrayList<State>(); // List of all States
+    
     public Executer(Builder b) {
 
+        all = b.getAll();
         
+        //Build Meta
         b.build();
         
-        System.out.println("Size Of State List: " + b.getSize());
-        b.printStates();
+        //Tests 
+        System.out.println("Size Of Statelist: " + b.getSize()+"\n");
         
+        System.out.println("All States In The List: "+"\n");
+        b.printStates();
     }
 
     public void processEvent(String event) {
-    //Transition transition  = currentState.getTransitionList();
+    /*
+            
+            for (int i = 0; i < all.size(); i++) {
+            all.get(i).getTransitionList().
+                
+        }
+    */
     }
 }

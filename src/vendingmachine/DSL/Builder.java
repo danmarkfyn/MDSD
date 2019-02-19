@@ -1,8 +1,3 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package vendingmachine.DSL;
 
 import java.util.ArrayList;
@@ -10,7 +5,8 @@ import java.util.List;
 
 /**
  *
- * @author Jakob Made with use of code provided by Ulrik Pagh Schultz,
+ * @author Jakob 
+ * Made with use of code provided by Ulrik Pagh Schultz,
  * University of Southern Denmark
  */
 // State machine builder
@@ -20,9 +16,14 @@ public abstract class Builder {
     // State
     // When/transition
     // To
+    
     private State currentState;
-    private List<State> all = new ArrayList<State>();
+    private List<State> all = new ArrayList<State>(); // List of all States
     private String event;
+
+    public List<State> getAll() {
+        return all;
+    }
     
     public Builder machine() {
         return this;
@@ -33,7 +34,7 @@ public abstract class Builder {
     public int getSize() {
         return all.size();
     }
-    
+    // Add state to list
     public Builder state(String name) {
         currentState = new State(name);
         all.add(currentState);
@@ -46,6 +47,7 @@ public abstract class Builder {
         return this;
     }
     
+    // Add transition to current state
     public Builder to(String s) {
         
         currentState.addTransition(new Transition(currentState.getName(), s));
@@ -53,13 +55,14 @@ public abstract class Builder {
         return this;
     }
     
+    // For testing (prints all states in the list)
     public void printStates() {
         
         int s = all.size();
         
         for (int i = 0; i < s; i++) {
             
-            System.out.println(all.get(i));
+            System.out.println("State " + (i+1) + ": "+all.get(i));
         }
     }
 }
