@@ -5,30 +5,27 @@
  */
 package vendingmachine;
 
+import vendingmachine.DSL.Builder;
+
 /**
  *
- * @author Jakob
+ * @author Jakob Made with use of code provided by Ulrik Pagh Schultz,
+ * University of Southern Denmark
  */
-
-
 // Logic for the vending state machine
-public class Vending extends Builder{
-    
-  
+public class Vending extends Builder {
 
-    protected void build() {
-        state("NO COINS").
-          transition("BUY").to("POWER_ON","").setState("power",MIN_POWER).
-        state("POWER_ON").
-          transition("PLUS").to("MAX_POWER").whenStateEquals("power",MAX_POWER).
-                             changeState("power",1).otherwise().
-          transition("MINUS").to("POWER_OFF").whenStateEquals("power",MIN_POWER).
-                             changeState("power",-1).otherwise().
-        state("MAX_POWER").
-          transition("MINUS").to("POWER_ON").setState("power",MAX_POWER)
-        ;
+    @Override
+    public void build() {
+// Meta Model (Diagram found in Metamodel folder)
+    
+        state("NO_COINS").
+                when("ADD").to("1_COIN").
+        state("1_COIN").
+                when("ADD").to("2_COIN").
+                when("CANCEL").to("NO_COINS").
+        state("2_COINS").
+                when("BUY").to("NO_COINS").
+                when("CANCEL").to("NO_COINS");
     }
-    
-    
-    
 }

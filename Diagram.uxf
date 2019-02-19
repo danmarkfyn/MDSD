@@ -41,37 +41,37 @@ bg=blue</panel_attributes>
     <id>Relation</id>
     <coordinates>
       <x>120</x>
-      <y>150</y>
+      <y>250</y>
       <w>160</w>
-      <h>170</h>
+      <h>70</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
 Add/coin=1</panel_attributes>
-    <additional_attributes>140.0;150.0;140.0;20.0;10.0;20.0;10.0;150.0</additional_attributes>
+    <additional_attributes>140.0;50.0;140.0;20.0;10.0;20.0;10.0;50.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>140</x>
-      <y>310</y>
+      <y>320</y>
       <w>340</w>
-      <h>180</h>
+      <h>100</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
 Cancel[coins==0]</panel_attributes>
-    <additional_attributes>10.0;20.0;10.0;160.0;160.0;160.0;160.0;10.0;160.0;160.0;320.0;160.0;320.0;20.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;80.0;160.0;80.0;160.0;10.0;160.0;80.0;320.0;80.0;320.0;10.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
     <coordinates>
       <x>330</x>
-      <y>150</y>
+      <y>250</y>
       <w>160</w>
-      <h>170</h>
+      <h>70</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
 Add/coin=coin+1</panel_attributes>
-    <additional_attributes>140.0;150.0;140.0;20.0;10.0;20.0;10.0;150.0</additional_attributes>
+    <additional_attributes>140.0;50.0;140.0;20.0;10.0;20.0;10.0;50.0</additional_attributes>
   </element>
   <element>
     <id>Relation</id>
@@ -79,10 +79,10 @@ Add/coin=coin+1</panel_attributes>
       <x>100</x>
       <y>320</y>
       <w>410</w>
-      <h>210</h>
+      <h>130</h>
     </coordinates>
     <panel_attributes>lt=&lt;&lt;-
 Buy[coins==0]</panel_attributes>
-    <additional_attributes>10.0;10.0;10.0;190.0;390.0;190.0;390.0;10.0</additional_attributes>
+    <additional_attributes>10.0;10.0;10.0;110.0;390.0;110.0;390.0;10.0</additional_attributes>
   </element>
 </diagram>

@@ -5,17 +5,29 @@
  */
 package vendingmachine;
 
+import vendingmachine.DSL.Builder;
+import vendingmachine.DSL.Executer;
+
 /**
  *
  * @author Jakob
+ * Made with use of code provided by Ulrik Pagh Schultz, University of Southern Denmark
  */
-public class VendingMachine extends Builder {
+public class VendingMachine{
 
     /**
      * @param args the command line arguments
      */
     // Run the Vending State Machine here
     public static void main(String[] args) {
-        // TODO code application logic here
+        // Run Code
+        
+        
+        Builder b = new Vending();
+        Executer e = new Executer(b);
+        
+        
+      //  e.processEvent();
+
     }
 }
